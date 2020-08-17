@@ -27,10 +27,6 @@ public class TransferPage {
         cancelButton.click();
     }
 
-    public SelenideElement showErrorMessage() {
-        return $(withText("Ошибка!")).shouldHave(Condition.visible);
-    }
-
     public SelenideElement showWarningMessage() {
         return $(withText("У вас недостаточно средств для перевода такой суммы")).shouldBe(Condition.visible);
     }

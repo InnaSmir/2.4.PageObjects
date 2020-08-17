@@ -5,7 +5,8 @@ import lombok.val;
 import ru.netology.page.DashboardPage;
 
 public class DataHelper {
-    private DataHelper() {}
+    private DataHelper() {
+    }
 
     @Value
     public static class AuthorizationInfo {
@@ -15,10 +16,6 @@ public class DataHelper {
 
     public static AuthorizationInfo getAuthorizationInfo() {
         return new AuthorizationInfo("vasya", "qwerty123");
-    }
-
-    public static AuthorizationInfo getOtherAuthorizationInfo(AuthorizationInfo original) {
-        return new AuthorizationInfo("ivan", "qwerty456");
     }
 
     @Value
@@ -35,12 +32,12 @@ public class DataHelper {
         private String number;
         private int balance;
 
-        public static Card getFirstCardInfo() {
+        public static Card getFirstCardBalance() {
             val dashboard = new DashboardPage();
             return new Card("5559 0000 0000 0001", dashboard.getCardBalance("01"));
         }
 
-        public static Card getSecondCardInfo() {
+        public static Card getSecondCardBalance() {
             val dashboard = new DashboardPage();
             return new Card("5559 0000 0000 0002", dashboard.getCardBalance("02"));
         }

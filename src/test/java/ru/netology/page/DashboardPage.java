@@ -25,12 +25,12 @@ public class DashboardPage {
         return new TransferPage();
     }
 
-    public int getFirstCardInfo() {
+    public int getFirstCardBalance() {
 
         return getCardBalance("01");
     }
 
-    public int getSecondCardInfo() {
+    public int getSecondCardBalance() {
 
         return getCardBalance("02");
     }
